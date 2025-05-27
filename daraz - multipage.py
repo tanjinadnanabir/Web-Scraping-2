@@ -1,5 +1,8 @@
 # Task 1: How to find total page number in daraz category page and implement in your code to iterate the page number. Please implement a code
 
+# We can find total page numbers from total items found in category page
+# just we need to divide total items by items per page, and then round it
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -46,3 +49,7 @@ print(len(title_list))
 
 # Task 2: How to do same work by clicking on pagination button without traversing page number. (Please make a idea. Code can be bonus but not mandatory)
 
+# We can read the every page number from the pagination bar itself, insted of counting pages from items found.
+# So, 
+# First we need to locate pagination bar buttons (or next button)
+# The next button will be auto clicked -> therefore page number will be changed -> therefore, product item titles will be scraped
